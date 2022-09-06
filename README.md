@@ -1,5 +1,6 @@
 # Frontend Assessment
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59fb27ac6f204e04a17a9b0772cc745b)](https://app.codacy.com/gh/oluseyi-ged/TalentQL-data-fetch?utm_source=github.com&utm_medium=referral&utm_content=oluseyi-ged/TalentQL-data-fetch&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/73fcfe9f069045cd9e7e13c8a3d92af4)](https://www.codacy.com/gh/oluseyi-ged/TalentQL-data-fetch/dashboard?utm_source=github.com&utm_medium=referral&utm_content=oluseyi-ged/TalentQL-data-fetch&utm_campaign=Badge_Grade)
 
 Build and deploy a very simple frontend app for paginated data, that does the following
