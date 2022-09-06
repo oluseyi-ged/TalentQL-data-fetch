@@ -12,10 +12,12 @@ const toggleLoader = (displayType: string) => {
 }
 
 const disableButton = () => {
-  ;(document.querySelector(".prev-button") as HTMLButtonElement).disabled = true
+  ;(document.querySelector(".prev-button") as HTMLButtonElement).disabled =
+    page === 1 ? true : false
 }
 
 const fetchData = () => {
+  disableButton()
   toggleLoader("block")
   fetch(
     `https://randomapi.com/api/8csrgnjw?key=LEIX-GF3O-AG7I-6J84&page=${page}`
@@ -39,7 +41,7 @@ const fetchData = () => {
 }
 
 const navigate = (type) => {
-  if (type === "prev") {
+  if (type === "prev" && page !== 1) {
     page = page - 1
     fetchData()
   } else if (type === "next") {
@@ -49,10 +51,6 @@ const navigate = (type) => {
 }
 
 const startApp = async () => {
-  if (page === 1) {
-    disableButton()
-  }
-
   fetchData()
   const previousButton = document.querySelector(".prev-button")
   previousButton.addEventListener("click", () => navigate("prev"))
