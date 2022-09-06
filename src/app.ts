@@ -2,6 +2,7 @@ const no = document.querySelectorAll(".no")
 const gender = document.querySelectorAll(".gender")
 const age = document.querySelectorAll(".age")
 const row = document.querySelectorAll(".row")
+const label = document.querySelector("label")
 let page = 1
 
 const toggleLoader = (displayType: string) => {
@@ -28,9 +29,11 @@ const fetchData = () => {
 
       row.forEach((_, key) => {
         row[key].setAttribute("id", `${pageResult[key].id}`)
+        row[key].setAttribute("data-entryid", `${pageResult[key].id}`)
         no[key].textContent = ` ${pageResult[key].row}`
         gender[key].textContent = ` ${pageResult[key].gender}`
         age[key].textContent = ` ${pageResult[key].age}`
+        label.textContent = `Showing Page ${page}`
       })
     })
 }
